@@ -1,38 +1,256 @@
 .App {
   text-align: center;
+  max-width: 933px;
+  margin: 0 auto;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,p{
+  margin: 0;
+}
+.wrapCar p {
+  margin: 5px;
+  font-weight: bold;
+  color: #a7a7a7 !important;
 }
 
+
+body{
+  padding:15px;
+  background-color: #e7e7e7;
+}
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.wrap-sec1{  
+  display: flex;
+  flex-direction: row;
+}
+
+.wrap-sec1 button {
+  border: 2px solid orange;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.wrap-sec2 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.wrap-chk{
+  width: 100%;
+  display: flex;
+}
+
+.wrap-chk div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-right: 15px;
+}
+
+.column{
+  flex-direction: column !important;
+}
+
+.wrap-inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+} 
+
+.wrap-fields1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom:15px;
+}
+
+.wrap-fields2,.wrap-fields3  {
+  width: 100%;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 15px;
+}
+
+.wrap-fields4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 35px;
+}
+
+.wrap-fields2 select {
+  width: 100%;
+  height: 35px;
+}
+
+select{
+  height: 35px;
+}
+
+.col-75{
+  width: 75%;
+} 
+
+.col-50{
+  width: 50%;
+} 
+
+.col-25{
+  width: 25%;
+} 
+
+.col{
+  display: flex;
+}
+
+input{
+  height:30px;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+select{
+  width: 100%;
+}
+
+
+.loading-select{
+  position: absolute;
+    height: 20px;
+    left: 5px;
+    margin-top: 7px !important;
+}
+
+.loading-veiculos{
+  height: 50px;
+  margin:0 auto;
+}
+
+.wrap-sec1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wrap-sec1 div:nth-child(1){
+  margin-right: 30px;
+}
+
+.left{
+  position: relative;
+  float: left;
+}
+.align-left{
+  text-align: left;
+}
+
+.lbl-busca-avancada{
+  color: red;
+  font-weight: bold;
+}
+
+
+.wrap-sec3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.btn-ofertas{
+    background-color: red;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    height: 35px;
+    width: 300px;
+    margin-left: 15px;
+}
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin-top:100px;
+}
+
+.wrapCar {
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+}
+.wrapCar h1 {
+  font-size: 1.5em;
+}
+.wrapCar p{
+  margin:5px;
+}
+
+.thumb-car{
+  max-width: 100%;
+  max-height: 150px !important;
+}
+
+@media only screen and (max-width: 900px) {
+  .wrap-sec1 {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .wrap-sec3,.wrap-btn-oferta {
+    flex-direction: column;
   }
+  .App-logo {
+    height: 10vmin;
+  }
+
+  .wrap-sec1 button {
+    width: 100%;
+    margin-top:15px;
+  }
+
+  .wrap-sec2 {
+    padding: 5px;
+    background-color: transparent !important;
+  }
+  .wrap-inputs {
+    grid-template-columns: 1fr;
+  }
+  body {
+    padding: 10px;
+  }
+
+  .wrap-btn-oferta {
+    flex-direction: column;
+    margin-top: 10px;
+    height: 100px;
+    justify-content: space-around;
+}
+
+.results {
+  grid-template-columns: 1fr;
+}
+
 }
